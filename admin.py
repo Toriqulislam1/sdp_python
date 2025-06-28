@@ -1001,7 +1001,7 @@ class Employee:
         self.tree.heading("Employee Name", text="Employee Name", anchor=W)
         self.tree.heading("Contact No.", text="Contact No.", anchor=W)
         self.tree.heading("Address", text="Address", anchor=W)
-        self.tree.heading("Aadhar No.", text="Aadhar No.", anchor=W)
+        self.tree.heading("Aadhar No.", text="NID No.", anchor=W)
         self.tree.heading("Password", text="Password", anchor=W)
         self.tree.heading("Designation", text="Designation", anchor=W)
 
@@ -1186,6 +1186,11 @@ class add_employee:
         self.entry2.configure(relief="flat")
         self.entry2.configure(validate="key", validatecommand=(self.r1, "%P"))
 
+    
+        self.label_nid = Label(e_add)
+        self.label_nid.place(relx=0.132, rely=0.495)
+        self.label_nid.configure(text="NID Number", font="-family {Poppins} -size 12", background="#ffffff", foreground="#000000")
+
         self.entry3 = Entry(e_add)
         self.entry3.place(relx=0.132, rely=0.529, width=374, height=30)
         self.entry3.configure(font="-family {Poppins} -size 12")
@@ -1332,6 +1337,15 @@ class Update_Employee:
         self.entry2.configure(font="-family {Poppins} -size 12")
         self.entry2.configure(relief="flat")
         self.entry2.configure(validate="key", validatecommand=(self.r1, "%P"))
+
+        # self.entry3 = Entry(e_update)
+        # self.entry3.place(relx=0.132, rely=0.529, width=374, height=30)
+        # self.entry3.configure(font="-family {Poppins} -size 12")
+        # self.entry3.configure(relief="flat")
+        # self.entry3.configure(validate="key", validatecommand=(self.r1, "%P"))
+        self.label_nid = Label(e_update)
+        self.label_nid.place(relx=0.132, rely=0.495)
+        self.label_nid.configure(text="NID Number", font="-family {Poppins} -size 12", background="#ffffff", foreground="#000000")
 
         self.entry3 = Entry(e_update)
         self.entry3.place(relx=0.132, rely=0.529, width=374, height=30)

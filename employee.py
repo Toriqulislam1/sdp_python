@@ -44,7 +44,7 @@ def random_bill_number(stringLength):
 
 
 def valid_phone(phn):
-    if re.match(r"[789]\d{9}$", phn):
+    if re.match(r"^(?:\+8801|8801|01)[0-9]{9}$", phn):
         return True
     return False
 
